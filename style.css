@@ -460,6 +460,8 @@ section { padding: 4rem 0; }
   .craft-grid { grid-template-columns: 1.1fr 0.9fr; }
 }
 
+.craft-media { min-width: 0; }
+
 .craft-media img { border-radius: var(--radius-md); }
 
 /* ---------- Hours ---------- */
@@ -618,7 +620,7 @@ section { padding: 4rem 0; }
 
 .find-us-mark {
   color: var(--border-subtle);
-  justify-self: center;
+  min-width: 0;
 }
 
 /* ---------- Footer ---------- */
@@ -673,11 +675,16 @@ section { padding: 4rem 0; }
 }
 
 .map {
-    height: 400px;
-    width: 600px;
-    margin-top: 25px;
+    width: 100%;
+    max-width: 600px;
+    height: 260px;
+    margin: 25px auto 0;
     border-radius: 16px;
     transition: transform 0.4s;
+}
+
+@media (min-width: 640px) {
+  .map { height: 400px; }
 }
 
 .map:hover {
